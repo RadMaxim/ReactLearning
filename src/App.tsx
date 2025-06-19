@@ -1,23 +1,23 @@
 import React from 'react';
 import './App.css';
+import {Box} from "@mui/material";
+import UniversityList from "./Page/UniversityList/UniversityList";
+import SearchInput from "./component/SearchInput/SearchInput";
+import {SearchProvider} from "./Context/SearchContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <SearchProvider>
+    <Box style={{
+      backgroundColor: "white",
+      padding: "1rem",
+    }}>
+      <Box>
+          <SearchInput/>
+        <UniversityList/>
+      </Box>
+    </Box>
+      </SearchProvider>
   );
 }
 
