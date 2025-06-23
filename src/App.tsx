@@ -1,23 +1,25 @@
-import React from 'react';
-import './App.css';
-import {Box} from "@mui/material";
+import React from "react";
+import "./App.css";
+import { Box } from "@mui/material";
 import UniversityList from "./Page/UniversityList/UniversityList";
 import SearchInput from "./component/SearchInput/SearchInput";
-import {SearchProvider} from "./Context/SearchContext";
+import { SearchProvider } from "./Context/SearchContext";
+import { styleBox, styleList } from "./style";
 
 function App() {
+    console.log("1")
+    console.log("2")
+    console.log("3")
+    console.log("4")
   return (
-      <SearchProvider>
-    <Box style={{
-      backgroundColor: "white",
-      padding: "1rem",
-    }}>
-      <Box>
-          <SearchInput/>
-        <UniversityList/>
+    <SearchProvider>
+      <Box style={styleBox}>
+        <Box style={{ padding: 10 }}>
+          <SearchInput />
+          <UniversityList  />
+        </Box>
       </Box>
-    </Box>
-      </SearchProvider>
+    </SearchProvider>
   );
 }
 
