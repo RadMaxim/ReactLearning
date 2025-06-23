@@ -8,6 +8,7 @@ import { styleBox, styleList } from "./style";
 
 function App() {
     console.log("1")
+    console.log("2")
   return (
     <SearchProvider>
       <Box style={styleBox}>
