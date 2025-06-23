@@ -12,7 +12,7 @@ function App() {
       <Box style={styleBox}>
         <Box style={{ padding: 10 }}>
           <SearchInput />
-          <UniversityList style={styleList} />
+          <UniversityList  />
         </Box>
       </Box>
     </SearchProvider>
