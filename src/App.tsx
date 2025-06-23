@@ -7,6 +7,8 @@ import { SearchProvider } from "./Context/SearchContext";
 import { styleBox, styleList } from "./style";
 
 function App() {
+    console.log("15")
+    console.log("16")
   return (
     <SearchProvider>
       <Box style={styleBox}>
