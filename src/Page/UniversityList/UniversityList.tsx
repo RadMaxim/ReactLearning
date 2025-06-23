@@ -24,7 +24,9 @@ const UniversityList: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [isPending, startTransition] = useTransition();
-
+    console.log(loading)
+    console.log(error)
+    console.log(isPending)
     const { search, country } = useSearch();
     const debouncedCountry = useDebouncedValue(country, 500);
     useEffect(() => {
