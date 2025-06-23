@@ -15,6 +15,7 @@ function App() {
     console.log("6")
     console.log("7")
     console.log("8")
+    console.log("9")
   return (
     <SearchProvider>
       <Box style={styleBox}>
