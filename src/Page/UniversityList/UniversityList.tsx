@@ -65,7 +65,7 @@ const UniversityList: React.FC = () => {
     return (
         <>
             <CountryInput />
-            <Container maxWidth="sm">
+            <Container maxWidth="sm" style={{height:"100%", width:"100%", maxWidth:"none"}}>
                 <Typography variant="h5" gutterBottom>
                     Университеты {country}
                 </Typography>
@@ -73,7 +73,7 @@ const UniversityList: React.FC = () => {
                 <Typography variant="body2" sx={{ mb: 2 }}>
                     Найдено: {filteredUniversities.length}
                 </Typography>
-                <List>
+                <List style={{height:"650px", width: "100%", overflowY:"auto",}}>
                     {filteredUniversities.slice(0, 100).map((university, index) => (
                         <ListItem key={index} divider>
                             <ListItemText
