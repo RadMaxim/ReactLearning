@@ -75,7 +75,7 @@ const UniversityList: React.FC = () => {
                 </Typography>
                 <List style={{height:"650px", width: "100%", overflowY:"auto",}}>
                     {filteredUniversities.slice(0, 100).map((university, index) => (
-                        <ListItem key={index} divider>
+                        <ListItem key={index} divider style={{backgroundColor: 'var(--blue-back-item)', padding: '10px', marginTop:10}}>
                             <ListItemText
                                 primary={university.name}
                                 secondary={university.web_pages[0]}
