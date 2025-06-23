@@ -6,15 +6,24 @@ import SearchInput from "./component/SearchInput/SearchInput";
 import {SearchProvider} from "./Context/SearchContext";
 
 function App() {
+  const styleBox = {
+    backgroundColor: "var(--blue-back)",
+    color: "var(--blue-text)",
+    width: "100%",
+
+  }
+  const styleList = {
+    overflow: "auto",
+    height: "73vh",
+    width: "100%",
+
+  }
   return (
       <SearchProvider>
-    <Box style={{
-      backgroundColor: "white",
-      padding: "1rem",
-    }}>
-      <Box>
+    <Box style={styleBox}>
+      <Box style={{ padding:10}}>
           <SearchInput/>
-        <UniversityList/>
+        <UniversityList style = {styleList}/>
       </Box>
     </Box>
       </SearchProvider>

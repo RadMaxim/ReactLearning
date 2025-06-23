@@ -10,7 +10,7 @@ import {
     ListItemText,
 
     Typography,
-    Container
+    Container, Box
 } from '@mui/material';
 import { fetchUniversities, University } from '../../service/universityService';
 import { useSearch } from '../../Context/SearchContext';
@@ -18,7 +18,7 @@ import CountryInput from '../../component/SearchInput/CountryInput';
 import { debounce } from 'lodash';
 import {useDebouncedValue} from "../../hook/useDebouncedValue";
 
-const UniversityList: React.FC = () => {
+const UniversityList = ({style}:{style: React.CSSProperties}) => {
     const [universities, setUniversities] = useState<University[]>([]);
     const [filteredUniversities, setFilteredUniversities] = useState<University[]>([]);
     const [loading, setLoading] = useState(true);
@@ -63,7 +63,7 @@ const UniversityList: React.FC = () => {
     return (
         <>
             <CountryInput />
-            <Container maxWidth="sm">
+            <Box style={{width:'100%', padding:0}}>
                 <Typography variant="h5" gutterBottom>
                     Университеты {country}
                 </Typography>
@@ -71,7 +71,7 @@ const UniversityList: React.FC = () => {
                 <Typography variant="body2" sx={{ mb: 2 }}>
                     Найдено: {filteredUniversities.length}
                 </Typography>
-                <List>
+                <List  style={style}>
                     {filteredUniversities.slice(0, 100).map((university, index) => (
                         <ListItem key={index} divider>
                             <ListItemText
@@ -81,7 +81,7 @@ const UniversityList: React.FC = () => {
                         </ListItem>
                     ))}
                 </List>
-            </Container>
+            </Box>
         </>
     );
 };
