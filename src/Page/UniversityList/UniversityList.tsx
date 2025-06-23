@@ -4,7 +4,6 @@ import {
   ListItem,
   ListItemText,
   Typography,
-  Container,
   Box,
 } from "@mui/material";
 import { fetchUniversities, University } from "../../service/universityService";

@@ -10,9 +10,9 @@ export async function fetchUniversities(
 ): Promise<University[]> {
   const res = await fetch(
     `http://universities.hipolabs.com/search?country=${country}`,
-  );
+  )
   if (!res.ok) {
-    throw new Error("Failed to fetch universities");
+    throw new Error('Failed to fetch universities')
   }
-  return await res.json();
+  return await res.json()
 }
