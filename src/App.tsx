@@ -6,6 +6,10 @@ import SearchInput from "./component/SearchInput/SearchInput";
 import {SearchProvider} from "./Context/SearchContext";
 
 function App() {
+  console.log("10")
+  console.log("11")
+  console.log("12")
+  console.log("13")
   return (
       <SearchProvider>
     <Box style={{
